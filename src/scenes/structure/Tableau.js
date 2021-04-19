@@ -92,21 +92,21 @@
     update(){
         super.update();
         this.player.move();
+
        // this.canDoubleJump();
         //appel du dash
         if (Phaser.Input.Keyboard.JustDown(this.KeyDash)){
             //this.player.dash = true;
             this.player.dash();
             this.gravity();
-            
             this.player.setTint(0xff0000);
             this.cameras.main.shake(200,0.004,true,); 
             return true;
-           
                  
          }
          else{
             this.player.setTint(0xffffff);
+        
            
              
          }
@@ -216,22 +216,25 @@
         }
     }
 
-
+    
     rammasserBonusUn (player, bonus)
     {
         bonus.disableBody(true, true);
         ui.gagne();
+        
         this.rammasserBonusUn=true;
         if( this.rammasserBonusUn == true){
-            this.cameras.main.flash(1000,255,162,0);
+            //this.cameras.main.setZoomIn(2);
+            var cam = this.cameras.main;
+                cam.setZoom(3000); 
+            //cam.pan(500, 500, 2000, 'Power2');
+            //cam.zoomTo(1, 2);
+            //this.cameras.main.flash(2000,255,162,0);
             this.player.scale += 0.4;
-            this.player.setGravityY(1200)
-            this.player.plusVite();
-            
-           
-
-        }
         
+            this.player.setGravityY(1200)
+        }
+        this.cameras.main.setZoom(1);
        
     }
 
@@ -258,7 +261,7 @@
      */
     
 
-  /*  hitMonster(player, monster,){
+    hitMonster(player, monster,){
         let me=this;
         if(monster.isDead !== true){ //si notre monstre n'est pas déjà mort
             if(
@@ -311,7 +314,7 @@
             }
         }
 
-    }*/
+    }
 
     /**
      * Pour reset cette scène proprement

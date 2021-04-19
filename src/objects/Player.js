@@ -75,7 +75,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
     }
     move(){
 
-         
+        
         switch (true){
             case this._directionX<0:
                 this.sens=-1;
@@ -151,6 +151,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
     }
 
     animDroite(){
+        
         this.scene.tweens.add({
             targets: this,
                 x: '+=200',
@@ -163,6 +164,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
   }
  
     animGauche(){
+      
        // this.setVelocityX(-10000);
        this.scene.tweens.add({
             targets: this,
@@ -196,7 +198,5 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             ease: 'Power2',         
        });      
     }*/
-    plusVite(){
-        
-    }
+    
 }

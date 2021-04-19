@@ -26,7 +26,7 @@ class TableauTiled extends Tableau{
         this.load.image('rouge', 'assets/rouge.png');
         this.load.image('rose', 'assets/rose.png');
         //les données du tableau qu'on a créé dans TILED
-        this.load.tilemapTiledJSON('map', 'assets/tilemaps/niveauAlpha03.json');
+        this.load.tilemapTiledJSON('map', 'assets/tilemaps/niveauAlpha01.json');
 
         // -----et puis aussi-------------
         this.load.image('yokai1', 'assets/yokai1.png');
