@@ -20,7 +20,7 @@ let config = {
     scene: [
         new Ui(),
 
-        new video("test"),
+        //new video("test"),
         new TableauTiled("Tiled pour les gros gros levels"),
         //new TableauPixelart("test"),
         //new TableauBirdSpriteJson("Un oiseau! "),
